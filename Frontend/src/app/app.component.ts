@@ -31,6 +31,6 @@ export class AppComponent {
     );
   }
   btnClick() {
-    this.router.navigateByUrl('/user');
+    this.router.navigateByUrl('trivia-game');
   }
 }
