@@ -4,31 +4,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-widht, initial-scale=1.0">
         <title> Quiz Game</title>
-
         <link rel="stylesheet" href="/src/styles.css">
     </head>
     <body>
-      
-      <h1 id="title"> Quiz</h1>
-
-      <div id="quiz-container">
-        <div class="answers">
-          <div id="questiontitle">Question:
-
-            <h2 id="answer"></h2>
-            <ol type="A">
-              <input class="option"><span
-              id="option0"></span>
-            </ol>
-            <h4 id="start"></h4>
-          </div>
-        </div>
+      <h1 id="title"> Quiz Game </h1>
         <div class="buttons">
-            <button type="button"
-            class="next">Answer</button>
-        </div>
+            <button type="button" class="next" (click)="btnClick()">Start</button> 
+            <!-- <button type="button"
+            class="next">Add Answers</button> -->
+            <button type="button" class="next" (click)="btnClick()">Add Question</button>    
 
-      </div>
+          </div>
       <div id="scoreboard">
         <h2 id="score"></h2>
       </div>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trivia-game',
@@ -6,5 +8,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./trivia-game.component.css']
 })
 export class TriviaGameComponent {
+    constructor(private http: HttpClient){}
+     posts: any[] = [];
+    loadPosts() {
+      this.http
+      .get('https://localhost:7151/api/TriviaGame/CreateQuestion', {})
+      .subscribe((posts: any) => {
+         this.posts = posts;
+      });
+    }
+    createPost() {
+      this.http.post('https://localhost:7151/api/TriviaGame/CreateQuestion', {
+        // title: 'Hello world',
+        // body: 'This is body',
+      }).subscribe(
+        (response: any) => {
+          alert(JSON.stringify(response));
+        },
+       (error) => {
+        alert(JSON.stringify(error));
+      }
+      );
+    }
+  }
 
-}

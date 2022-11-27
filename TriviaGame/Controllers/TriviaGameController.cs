@@ -17,6 +17,7 @@ namespace TriviaGame.Controllers
         }
 
         [HttpPost]
+        [Route("CreateQuestion")]
         public JsonResult CreateQuestion(QuestionsModel question)
         {
             if (question.Id == 0)
@@ -38,6 +39,7 @@ namespace TriviaGame.Controllers
         }
 
         [HttpGet]
+        [Route("GetQuestion")]
         public JsonResult GetQuestion(int id)
         {
             var result = _context.DbQuestions.Find(id);
