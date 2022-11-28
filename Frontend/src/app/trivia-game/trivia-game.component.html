@@ -1,50 +1,55 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+           <meta charset="UTF-8">
         <meta name="viewport" content="width=device-widht, initial-scale=1.0">
         <title> Quiz Game</title>
-
         <link rel="stylesheet" href="/src/styles.css">
     </head>
     <body>
-      <img src="/src/app/Images/Logo.png" alt="img" id="img"
-      class="img">
+
       <h1 id="title"> Quiz</h1>
 
       <div id="quiz-container">
-        <div class="questions">
-            <h2 id="question"></h2>
+        <div class="answers">
+          <div id="questiontitle">Question:
+
+            <h2 id="answer"></h2>
             <ol type="A">
-                <li class="option"><span
-                    id="option0"></span></li>
+              <input class="option"><span
+              id="option0"></span>
             </ol>
             <h4 id="start"></h4>
+          </div>
         </div>
         <div class="buttons">
             <button type="button"
-            class="next"></button>
+            class="next">Answer</button>
         </div>
 
       </div>
       <div id="scoreboard">
-        <img src="" alt="">
-        <h2 id="score-title">Youre Score</h2>
         <h2 id="score"></h2>
-        <button type="button" 
-        id="score-btn">Back to Quiz</button>
-        <button type="button" 
-        id="check-answer">Check Answer</button>
       </div>
 
-      <div id="answerBank">
-        <h2>Answer : </h2>
-        <ol type="1">
 
-        </ol>
-        <button type="button" 
-        id="score-btn">Back to Quiz</button>
+      <div *ngFor="let post of posts">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.body }}</p>
+        <hr />
       </div>
-    </body> 
+
+      <a
+      (click)="loadPosts()"
+      class="btn btn-lg btn-primary"
+      href="javascript:void(0)"
+      > Call Now</a>
+
+      <a
+      (click)="createPost()"
+      class="btn btn-lg btn-primary ms-4"
+      href="javascript:void(0)"
+      > Create Post</a>
+
+    </body>
 </html>
- -->
