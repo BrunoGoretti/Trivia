@@ -25,9 +25,9 @@ img{
     text-align: center;
     padding: 0.8rem 0;
     font-size: 3rem;
-    color: rgb(49,70,7);
-    background: rgba(134, 240, 120, 0.311);
-    font-family: Georgia, 'Times New Roman', 
+    color: rgb(255, 255, 255);
+    background: rgba(78, 79, 77, 0.311);
+    font-family: Georgia, 'Times New Roman',
     Times, serif;
 }
 #questiontitle{
@@ -87,8 +87,8 @@ button{
     font-size: 1.5rem;
     border-radius: 1.5rem;
     color: rgba(43, 19, 19, 0.98);
-    background: rgba(172, 95, 67, 0.98);
+    background: rgba(244, 115, 68, 0.98);
 }
 button:active{
-    background: lavender;
+    background: rgb(250, 241, 230);
 }
