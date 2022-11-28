@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+           <meta charset="UTF-8">
         <meta name="viewport" content="width=device-widht, initial-scale=1.0">
         <title> Quiz Game</title>
-         <div>
-          <a routerLink="/game"></a>
-         </div>
         <link rel="stylesheet" href="/src/styles.css">
     </head>
     <body>
-      
+
       <h1 id="title"> Quiz</h1>
 
       <div id="quiz-container">
@@ -34,25 +31,25 @@
       <div id="scoreboard">
         <h2 id="score"></h2>
       </div>
-      
-      
+
+
       <div *ngFor="let post of posts">
         <h1>{{ post.title }}</h1>
         <p>{{ post.body }}</p>
         <hr />
       </div>
 
-      <a 
+      <a
       (click)="loadPosts()"
       class="btn btn-lg btn-primary"
       href="javascript:void(0)"
       > Call Now</a>
 
-      <a 
+      <a
       (click)="createPost()"
       class="btn btn-lg btn-primary ms-4"
       href="javascript:void(0)"
       > Create Post</a>
 
-    </body> 
+    </body>
 </html>

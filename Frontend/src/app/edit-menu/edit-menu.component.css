@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: sans-serif;
+  background: linear-gradient(115deg, rgba(101,151,209,0.8), rgba(202,102,211,0.5)),
+  url(src/app/Images/Menu.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+img{
+  width: 5.5rem;
+  height: 5.2rem;
+  border-radius: 50%;
+}
+.img{
+  position: fixed;
+}
+#title{
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 3rem;
+  color: rgb(49,70,7);
+  background: rgba(134, 240, 120, 0.311);
+  font-family: Georgia, 'Times New Roman',
+  Times, serif;
+}
+#questiontitle{
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 2rem;
+  color: rgb(39, 58, 5);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+.answers{
+  margin: 3rem auto;
+  width: 50vw;
+  padding: 5rem;
+  background: rgba(93, 252, 88, 0.171);
+  cursor: default;
+  border: 1rem;
+  text-align: center;
+  border-radius: 22px;
+}
+#answer{
+  margin-bottom: 1rem;
+}
+.option{
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  border-bottom: solid 0.1rem blue;
+  width: 25rem;
+  background: rgb(230, 254, 234);
+  border-radius: 1rem;
+  text-align: center;
+}
+ol{
+  position: relative;
+  padding: 0 1.5rem;
+  color: rgba(1, 73, 73);
+}
+span{
+  display: block;
+  padding: 0.1rem 0.7rem;
+  border-radius: 1rem;
+}
+#answer{
+  margin-top: 2.5rem;
+}
+#stat{
+  margin-top: 1.5rem;
+  color: rgb(6, 17, 168);
+}
+.buttons{
+  text-align: center;
+}
+button{
+  padding: 0.2rem 1.5rem;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  border-radius: 1.5rem;
+  color: rgba(43, 19, 19, 0.98);
+  background: rgba(172, 95, 67, 0.98);
+}
+button:active{
+  background: lavender;
+}
