@@ -19,8 +19,6 @@ export class AppComponent {
   }
   createPost() {
     this.http.post('https://localhost:7151/api/TriviaGame/CreateQuestion', {
-      // title: 'Hello world',
-      // body: 'This is body',
     }).subscribe(
       (response: any) => {
         alert(JSON.stringify(response));
