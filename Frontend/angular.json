@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/frontend",
-            "index": "src/app/edit-menu/edit-menu.component.html",
+            "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
