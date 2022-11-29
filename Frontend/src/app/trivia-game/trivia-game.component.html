@@ -31,25 +31,5 @@
       <div id="scoreboard">
         <h2 id="score"></h2>
       </div>
-
-
-      <div *ngFor="let post of posts">
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.body }}</p>
-        <hr />
-      </div>
-
-      <a
-      (click)="loadPosts()"
-      class="btn btn-lg btn-primary"
-      href="javascript:void(0)"
-      > Call Now</a>
-
-      <a
-      (click)="createPost()"
-      class="btn btn-lg btn-primary ms-4"
-      href="javascript:void(0)"
-      > Create Post</a>
-
     </body>
 </html>
