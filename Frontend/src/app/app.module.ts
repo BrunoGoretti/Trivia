@@ -6,18 +6,20 @@ import { TriviaGameComponent } from './trivia-game/trivia-game.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EditMenuComponent } from './edit-menu/edit-menu.component';
 import { AddQuestionComponent } from './add-question/add-question.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     TriviaGameComponent,
     EditMenuComponent,
-    AddQuestionComponent,
+    AddQuestionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

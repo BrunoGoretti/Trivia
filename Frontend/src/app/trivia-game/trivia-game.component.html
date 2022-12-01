@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-           <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
-        <title> Quiz Game</title>
-        <link rel="stylesheet" href="/src/styles.css">
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Quiz</h1>
 
-      <h1 id="title"> Quiz</h1>
+    <div id="quiz-container">
+      <div class="answers">
+        <div id="questiontitle">
+          Question:
 
-      <div id="quiz-container">
-        <div class="answers">
-          <div id="questiontitle">Question:
-
-            <h2 id="answer"></h2>
-            <ol type="A">
-              <input class="option"><span
-              id="option0"></span>
-            </ol>
-            <h4 id="start"></h4>
-          </div>
+          <h2 id="answer"></h2>
+          <ol type="A">
+            <input class="option" /><span id="option0"></span>
+          </ol>
+          <h4 id="start"></h4>
         </div>
-        <div class="buttons">
-            <button type="button"
-            class="next">Answer</button>
-        </div>
-
       </div>
-      <div id="scoreboard">
-        <h2 id="score"></h2>
+      <div class="buttons">
+        <button type="button" class="next">Answer</button>
       </div>
-    </body>
+    </div>
+    <div id="scoreboard">
+      <h2 id="score"></h2>
+    </div>
+  </body>
 </html>
