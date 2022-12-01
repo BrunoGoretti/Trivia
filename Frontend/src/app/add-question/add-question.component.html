@@ -1,1 +1,56 @@
-<p>add-question works!</p>
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0" />
+    <title>Add Queston</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Add Queston</h1>
+    <thead>
+      <th>Question</th>
+      <th></th>
+    </thead>
+    <div *ngIf="question">
+      <h2>{{ question.questionText }}</h2>
+    <div>
+      Question:
+      <input [(ngModel)]="question.questionText" placeholder="Name" />
+    </div>
+  </div>
+  <div>
+    <button (click)="createQuestion(question)" *ngIf="!question.id">
+      Create
+    </button>
+  </div>
+</body>
+</html> -->
+
+<html>
+
+  <body>
+    <div *ngIf="question">
+      <h2>{{ question.questionText }}</h2>
+    <div>
+      Name:
+      <input [(ngModel)] = "question.questionText" placeholder="Name"/>
+    </div>
+    <div>
+      First Name:
+      <input [(ngModel)] = "question.questionText" placeholder="First Name"/>
+    </div>
+    <div>
+      Last Name:
+      <input [(ngModel)] = "question.questionText" placeholder="Last Name"/>
+    </div>
+    <div>
+      Place:
+      <input [(ngModel)] = "question.questionText" placeholder="Place"/>
+    </div>
+    <button (click)="createQuestion(question)" *ngIf="!question.id">
+      Create
+    </button>
+</div>
+</body>
+</html>
