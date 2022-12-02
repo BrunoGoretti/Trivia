@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using TriviaGame.Data;
 using TriviaGame.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace TriviaGame.Controllers
 {
@@ -16,38 +17,19 @@ namespace TriviaGame.Controllers
             _context = context;
         }
 
-        [HttpPost]
-        [Route("CreateQuestion")]
-        public JsonResult CreateQuestion(QuestionsModel question)
+        [HttpGet]
+        public async Task<ActionResult<List<QuestionsModel>>> GetQuestion()
         {
-            if (question.Id == 0)
-            {
-                _context.DbQuestions.Add(question);
-            }
-            else
-            {
-                var QuestionInDb = _context.DbQuestions.Find(question.Id);
-
-                if (QuestionInDb == null)
-                    return new JsonResult(NotFound());
-
-                QuestionInDb = question;
-            }
-
-            _context.SaveChanges();
-            return new JsonResult(Ok(question));
+            return Ok(await _context.QuestionsModels.ToListAsync());
         }
 
-        [HttpGet]
-        [Route("GetQuestion")]
-        public JsonResult GetQuestion(int id)
+        [HttpPost]
+        public async Task<ActionResult<List<QuestionsModel>>> CreateQuestion(QuestionsModel question)
         {
-            var result = _context.DbQuestions.Find(id);
+            _context.QuestionsModels.Add(question);
+            await _context.SaveChangesAsync();
 
-            if (result == null)
-                return new JsonResult(NotFound());
-
-            return new JsonResult(Ok(result));
+            return Ok(await _context.QuestionsModels.ToListAsync());
         }
     }
 }

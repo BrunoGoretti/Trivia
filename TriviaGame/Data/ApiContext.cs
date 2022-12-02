@@ -8,9 +8,7 @@ namespace TriviaGame.Data
         public DbSet<QuestionsModel> DbQuestions { get; set; }
 
         public ApiContext(DbContextOptions<ApiContext> options)
-            : base(options)
-        {
-
-        }
+            : base(options) { }
+        public DbSet<QuestionsModel> QuestionsModels => Set<QuestionsModel>();
     }
 }

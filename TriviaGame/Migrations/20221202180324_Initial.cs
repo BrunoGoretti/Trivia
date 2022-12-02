@@ -4,12 +4,12 @@
 
 namespace TriviaGame.Migrations
 {
-    public partial class adjasddhsjsad : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "DbQuestions",
+                name: "QuestionsModel",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -19,14 +19,14 @@ namespace TriviaGame.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DbQuestions", x => x.Id);
+                    table.PrimaryKey("PK_QuestionsModel", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "DbQuestions");
+                name: "QuestionsModel");
         }
     }
 }
