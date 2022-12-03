@@ -10,7 +10,7 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
   styleUrls: ['./add-question.component.css']
 })
 export class AddQuestionComponent implements OnInit{
-  @Input() question!: AddQuestion;
+  @Input() question?: AddQuestion;
   @Output() questionUpdated = new EventEmitter<AddQuestion[]>();
   constructor(private http: HttpClient, private router: Router,
     private addQuestionService: AddQuestionService){}
