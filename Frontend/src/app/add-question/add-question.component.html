@@ -16,10 +16,8 @@
       <h2>{{ question.questionText }}</h2>
     <div>
       Question:
-      <input [(ngModel)]="question.questionText" placeholder="Name" />
+      <input [(ngModel)]="question.questionText" placeholder="Question Text" />
     </div>
-  </div>
-  <div>
     <button (click)="createQuestion(question)" *ngIf="!question.id">
       Create
     </button>
@@ -28,25 +26,12 @@
 </html>
 
 <!-- <html>
-
   <body>
     <div *ngIf="question">
       <h2>{{ question.questionText }}</h2>
     <div>
       Name:
-      <input [(ngModel)] = "question.questionText" placeholder="Name"/>
-    </div>
-    <div>
-      First Name:
-      <input [(ngModel)] = "question.questionText" placeholder="First Name"/>
-    </div>
-    <div>
-      Last Name:
-      <input [(ngModel)] = "question.questionText" placeholder="Last Name"/>
-    </div>
-    <div>
-      Place:
-      <input [(ngModel)] = "question.questionText" placeholder="Place"/>
+      <input [(ngModel)] = "question.questionText" placeholder="Question Text"/>
     </div>
     <button (click)="createQuestion(question)" *ngIf="!question.id">
       Create
