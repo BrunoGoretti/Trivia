@@ -15,11 +15,11 @@ export class AppComponent {
 
   constructor(private addQuestionService: AddQuestionService,
     private http: HttpClient, private router: Router){}
-  // ngOnInit() : void {
-  //   this.addQuestionService
-  //   .getSuperHeroes()
-  //   .subscribe((result: AddQuestion[]) => (this.questions = result));
-  // }
+    ngOnInit() : void {
+    this.addQuestionService
+    .getQuestion()
+    .subscribe((result: AddQuestion[]) => (this.questions = result));
+    }
   //  posts: any[] = [];
   // loadPosts() {
   //   this.http

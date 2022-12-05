@@ -11,6 +11,13 @@ import { TriviaGameComponent } from '../trivia-game/trivia-game.component';
 export class EditMenuComponent {
   constructor(private http: HttpClient, private router: Router) {}
   posts: any[] = [];
+
+  btnClick() {
+    this.router.navigateByUrl('trivia-game');
+  }
+  btnAddQuestion() {
+    this.router.navigateByUrl('add-question');
+  }
   // loadPosts() {
   //   this.http
   //     .get('https://localhost:7151/api/TriviaGame/CreateQuestion', {})
@@ -33,10 +40,4 @@ export class EditMenuComponent {
   //       }
   //     );
   // }
-  btnClick() {
-    this.router.navigateByUrl('trivia-game');
-  }
-  btnAddQuestion() {
-    this.router.navigateByUrl('add-question');
-  }
 }
