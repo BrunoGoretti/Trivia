@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { TriviaGameComponent } from '../trivia-game/trivia-game.component';
+import { AddQuestion } from 'src/app/models/question-model';
+import { AddQuestionService } from 'src/app/services/add-question.service';
 
 @Component({
   selector: 'app-edit-menu',
@@ -9,35 +11,33 @@ import { TriviaGameComponent } from '../trivia-game/trivia-game.component';
   styleUrls: ['./edit-menu.component.css'],
 })
 export class EditMenuComponent {
-  constructor(private http: HttpClient, private router: Router) {}
-  posts: any[] = [];
+  questions: AddQuestion[] = [];
+  title = 'AddQuestion.UI';
+  QuestionToEdit? : AddQuestion;
 
-  btnClick() {
-    this.router.navigateByUrl('trivia-game');
-  }
-  btnAddQuestion() {
-    this.router.navigateByUrl('add-question');
-  }
-  // loadPosts() {
-  //   this.http
-  //     .get('https://localhost:7151/api/TriviaGame/CreateQuestion', {})
-  //     .subscribe((posts: any) => {
-  //       this.posts = posts;
-  //     });
+  constructor(private addQuestionService: AddQuestionService,
+    private http: HttpClient, private router: Router){}
+    ngOnInit() : void {
+    this.addQuestionService
+    .getQuestion()
+    .subscribe((result: AddQuestion[]) => (this.questions = result));
+    }
+
+    updateQuestionList(questions: AddQuestion[]){
+      this.questions = questions;
+    }
+
+    initNewHero(){
+      this.QuestionToEdit = new AddQuestion();
+    }
+
+
+
+  // btnClick() {
+  //   this.router.navigateByUrl('trivia-game');
   // }
-  // createPost() {
-  //   this.http
-  //     .post('https://localhost:7151/api/TriviaGame/CreateQuestion', {
-  //       // title: 'Hello world',
-  //       // body: 'This is body',
-  //     })
-  //     .subscribe(
-  //       (response: any) => {
-  //         alert(JSON.stringify(response));
-  //       },
-  //       (error) => {
-  //         alert(JSON.stringify(error));
-  //       }
-  //     );
+  // btnAddQuestion() {
+  //   this.router.navigateByUrl('add-question');
   // }
+
 }

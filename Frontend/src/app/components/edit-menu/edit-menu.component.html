@@ -12,8 +12,9 @@
 
       <h1 id="title"> Quiz Game </h1>
         <div class="buttons">
-            <button type="button" class="next" (click)="btnClick()">Start</button>
-            <button type="button" class="next" (click)="btnAddQuestion()">Add Question</button>
+            <!-- <button type="button" class="next" (click)="btnClick()">Start</button> -->
+            <button type="button" class="next" (click)="initNewHero()">Add Question</button>
+            <app-add-question [question]="QuestionToEdit" (questionUpdated)="updateQuestionList($event)"></app-add-question>
 
           </div>
       <div id="scoreboard">
