@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { TriviaGameComponent } from './trivia-game/trivia-game.component';
-import { EditMenuComponent } from './edit-menu/edit-menu.component';
-import { AddQuestionComponent } from './add-question/add-question.component';
+import { TriviaGameComponent } from './components/trivia-game/trivia-game.component';
+import { EditMenuComponent } from './components/edit-menu/edit-menu.component';
+import { AddQuestionComponent } from './components/add-question/add-question.component';
 
 
 const routes: Routes = [
