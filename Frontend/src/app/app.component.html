@@ -1,4 +1,4 @@
-<html lang="en">
+<!-- <html lang="en">
   <body>
     <router-outlet></router-outlet>
   </body>
@@ -8,4 +8,17 @@
     <title>Quiz Game</title>
     <link rel="stylesheet" href="" />
   </head>
-</html>
+</html> -->
+
+<button (click)="createQuestion()">CreateQuestion</button>
+
+<table>
+  <thead>
+    <th>Ques</th>
+  </thead>
+  <tbody>
+    <tr> *ngFor="let question of questions"
+      <td>{{ question.questionText }}</td>
+    </tr>
+  </tbody>
+</table>

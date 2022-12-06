@@ -24,4 +24,8 @@ export class AddQuestionComponent implements OnInit{
       .createQuestion(question)
       .subscribe((questions : AddQuestion[]) => this.questionUpdated.emit(questions));
     }
+
+    initNewQuestion(){
+      this.question = new AddQuestion();
+    }
 }

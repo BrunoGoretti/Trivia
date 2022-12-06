@@ -11,11 +11,7 @@ export class AddQuestionService {
   private url = "AddQuestion";
 
   constructor(private http: HttpClient) { }
-
-  // public getSuperHeroes() : Observable<AddQuestion[]> {
-
-  //  return this.http.get<AddQuestion[]>(`${enviroments.apiUrl}/${this.url}`);
-  // }
+  
   public updateQuestion(question : AddQuestion) : Observable<AddQuestion[]> {
 
     return this.http.put<AddQuestion[]>(
