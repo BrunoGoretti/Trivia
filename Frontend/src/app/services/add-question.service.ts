@@ -8,6 +8,7 @@ import { AddQuestion } from 'src/app/models/question-model';
   providedIn: 'root'
 })
 export class AddQuestionService {
+  constructor(private http: HttpClient) { }
   private url = "AddQuestion";
 
   public getQuestion() : Observable<AddQuestion[]> {

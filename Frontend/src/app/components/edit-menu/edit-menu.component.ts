@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { TriviaGameComponent } from '../trivia-game/trivia-game.component';
+import { AddQuestion } from 'src/app/models/question-model';
+import { AddQuestionService } from 'src/app/services/add-question.service';
 
 @Component({
   selector: 'app-edit-menu',

@@ -10,4 +10,4 @@ import { Router } from '@angular/router';
 export class TriviaGameComponent {
     constructor(private http: HttpClient){}
      posts: any[] = [];
-
+}
