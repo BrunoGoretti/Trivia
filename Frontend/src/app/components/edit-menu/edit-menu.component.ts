@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { TriviaGameComponent } from '../trivia-game/trivia-game.component';
-import { AddQuestion } from 'src/app/models/question-model';
-import { AddQuestionService } from 'src/app/services/add-question.service';
 
 @Component({
   selector: 'app-edit-menu',
@@ -11,26 +9,6 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
   styleUrls: ['./edit-menu.component.css'],
 })
 export class EditMenuComponent {
-  questions: AddQuestion[] = [];
-  title = 'AddQuestion.UI';
-  QuestionToEdit? : AddQuestion;
-
-  constructor(private addQuestionService: AddQuestionService,
-    private http: HttpClient, private router: Router){}
-    ngOnInit() : void {
-    this.addQuestionService
-    .getQuestion()
-    .subscribe((result: AddQuestion[]) => (this.questions = result));
-    }
-
-    updateQuestionList(questions: AddQuestion[]){
-      this.questions = questions;
-    }
-
-    initNewHero(){
-      this.QuestionToEdit = new AddQuestion();
-    }
-
   constructor(private http: HttpClient, private router: Router) {}
   posts: any[] = [];
   
