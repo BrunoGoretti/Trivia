@@ -13,14 +13,9 @@ export class AddQuestionComponent implements OnInit{
   @Input() question?: AddQuestion;
   @Output() questionUpdated = new EventEmitter<AddQuestion[]>();
   constructor(private http: HttpClient, private router: Router,
-<<<<<<< HEAD
     private addQuestionService: AddQuestionService){}
 
     ngOnInit() : void {
-=======
-    private addQuestionService: AddQuestionService) { }
-  ngOnInit() : void {
->>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
 
      }
 
@@ -28,5 +23,9 @@ export class AddQuestionComponent implements OnInit{
       this.addQuestionService
       .createQuestion(question)
       .subscribe((questions : AddQuestion[]) => this.questionUpdated.emit(questions));
+    }
+
+    initNewQuestion(){
+      this.question = new AddQuestion();
     }
 }

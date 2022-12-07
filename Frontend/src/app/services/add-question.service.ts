@@ -10,7 +10,6 @@ import { AddQuestion } from 'src/app/models/question-model';
 export class AddQuestionService {
   private url = "AddQuestion";
 
-<<<<<<< HEAD
   constructor(private http: HttpClient) { }
   
   public updateQuestion(question : AddQuestion) : Observable<AddQuestion[]> {
@@ -19,11 +18,6 @@ export class AddQuestionService {
       `${enviroments.apiUrl}/${this.url}`,
       question);
    }
-=======
-  public getQuestion() : Observable<AddQuestion[]> {
-   return this.http.get<AddQuestion[]>(`${enviroments.apiUrl}/${this.url}`);
-  }
->>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
 
    public createQuestion(question : AddQuestion) : Observable<AddQuestion[]> {
 

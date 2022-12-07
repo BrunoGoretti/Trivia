@@ -11,7 +11,7 @@ using TriviaGame.Data;
 namespace TriviaGame.Migrations
 {
     [DbContext(typeof(ApiContext))]
-    [Migration("20221202180324_Initial")]
+    [Migration("20221206122717_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,7 @@ namespace TriviaGame.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("QuestionsModel");
+                    b.ToTable("QuestionsModels");
                 });
 #pragma warning restore 612, 618
         }
