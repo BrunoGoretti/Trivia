@@ -33,9 +33,9 @@ export class EditMenuComponent {
 
 
 
-  // btnClick() {
-  //   this.router.navigateByUrl('trivia-game');
-  // }
+  btnClick() {
+    this.router.navigateByUrl('trivia-game');
+  }
   // btnAddQuestion() {
   //   this.router.navigateByUrl('add-question');
   // }
