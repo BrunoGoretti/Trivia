@@ -34,9 +34,6 @@ export class EditMenuComponent {
       this.QuestionToEdit = new AddQuestion();
     }
 
-<<<<<<< HEAD
->>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
-=======
 >>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
   btnClick() {
     this.router.navigateByUrl('trivia-game');
