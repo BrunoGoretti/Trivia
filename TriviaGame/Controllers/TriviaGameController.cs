@@ -17,13 +17,13 @@ namespace TriviaGame.Controllers
             _context = context;
         }
 
-        [HttpGet("GetQuestion")]
+        [HttpGet]
         public async Task<ActionResult<List<QuestionsModel>>> GetQuestion()
         {
             return Ok(await _context.QuestionsModels.ToListAsync());
         }
 
-        [HttpPost("CreateQuestion")]
+        [HttpPost]
         public async Task<ActionResult<List<QuestionsModel>>> CreateQuestion(QuestionsModel question)
         {
             _context.QuestionsModels.Add(question);
