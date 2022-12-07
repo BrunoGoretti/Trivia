@@ -31,13 +31,11 @@ export class EditMenuComponent {
       this.QuestionToEdit = new AddQuestion();
     }
 
-
-
   btnClick() {
     this.router.navigateByUrl('trivia-game');
   }
-  // btnAddQuestion() {
-  //   this.router.navigateByUrl('add-question');
-  // }
+  btnAddQuestion() {
+    this.router.navigateByUrl('add-question');
+  }
 
 }
