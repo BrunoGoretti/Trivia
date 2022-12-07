@@ -12,10 +12,13 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
 export class AppComponent {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   title = 'TriviaGame.UI';
   questions:
 =======
+=======
+>>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
 =======
 >>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
 =======
@@ -53,6 +56,9 @@ export class AppComponent {
   //   );
   // }
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
+=======
 >>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
 =======
 >>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
