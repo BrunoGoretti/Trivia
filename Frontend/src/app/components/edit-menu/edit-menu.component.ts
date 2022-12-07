@@ -35,9 +35,6 @@ export class EditMenuComponent {
     }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
-=======
 >>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
 =======
 >>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
