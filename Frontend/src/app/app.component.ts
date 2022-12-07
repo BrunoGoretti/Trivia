@@ -11,10 +11,13 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
 })
 export class AppComponent {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< Updated upstream
   title = 'TriviaGame.UI';
   questions:
 =======
+=======
+>>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
 =======
 >>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
   title = 'AddQuestion.UI';
@@ -49,6 +52,9 @@ export class AppComponent {
   //   }
   //   );
   // }
+<<<<<<< HEAD
+>>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
+=======
 >>>>>>> parent of 99d0fc3 (Merge branch 'main' into RudikBranch)
   btnClick() {
     this.router.navigateByUrl('trivia-game');
