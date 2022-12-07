@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AddQuestion } from 'src/app/models/question-model';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AddQuestionService } from 'src/app/services/add-question.service';
 
 @Component({
@@ -10,6 +10,7 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'AddQuestion.UI';
   questions: AddQuestion[] = [];
 
@@ -39,6 +40,7 @@ export class AppComponent {
   //   }
   //   );
   // }
+
   btnClick() {
     this.router.navigateByUrl('trivia-game');
   }

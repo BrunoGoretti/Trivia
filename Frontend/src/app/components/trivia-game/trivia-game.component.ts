@@ -30,3 +30,12 @@ export class TriviaGameComponent {
     }
   }
 
+    ngOnInit() : void {
+
+     }
+    getQuestion(question: ) {
+      .createQuestion(question)
+      .subscribe((questions : AddQuestion[]) => this.questionUpdated.emit(questions));
+    }
+}
+

@@ -14,6 +14,13 @@ export class AddQuestionService {
   public getQuestion() : Observable<AddQuestion[]> {
    return this.http.get<AddQuestion[]>(`${enviroments.apiUrl}/${this.url}`);
   }
+  
+  public updateQuestion(question : AddQuestion) : Observable<AddQuestion[]> {
+
+    return this.http.put<AddQuestion[]>(
+      `${enviroments.apiUrl}/${this.url}`,
+      question);
+   }
 
    public createQuestion(question : AddQuestion) : Observable<AddQuestion[]> {
     return this.http.post<AddQuestion[]>(
