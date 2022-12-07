@@ -13,9 +13,8 @@ export class AddQuestionComponent implements OnInit{
   @Input() question?: AddQuestion;
   @Output() questionUpdated = new EventEmitter<AddQuestion[]>();
   constructor(private http: HttpClient, private router: Router,
-    private addQuestionService: AddQuestionService){}
-
-    ngOnInit() : void {
+    private addQuestionService: AddQuestionService) { }
+  ngOnInit() : void {
 
      }
 
@@ -23,9 +22,5 @@ export class AddQuestionComponent implements OnInit{
       this.addQuestionService
       .createQuestion(question)
       .subscribe((questions : AddQuestion[]) => this.questionUpdated.emit(questions));
-    }
-
-    initNewQuestion(){
-      this.question = new AddQuestion();
     }
 }
