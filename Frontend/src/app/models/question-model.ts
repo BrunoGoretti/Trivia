@@ -1,5 +1,5 @@
 export class AddQuestion {
   id?: number;
-  questionText? = "";
-  rightAnswer? = "";
+  questionText = "";
+  rightAnswer = "";
 }
