@@ -37,7 +37,7 @@ namespace TriviaGame.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("QuestionsModels");
+                    b.ToTable("QuestionsModel");
                 });
 #pragma warning restore 612, 618
         }

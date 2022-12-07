@@ -11,12 +11,3 @@ export class TriviaGameComponent {
     constructor(private http: HttpClient){}
      posts: any[] = [];
 
-    ngOnInit() : void {
-
-     }
-    getQuestion(question: ) {
-      .createQuestion(question)
-      .subscribe((questions : AddQuestion[]) => this.questionUpdated.emit(questions));
-    }
-}
-

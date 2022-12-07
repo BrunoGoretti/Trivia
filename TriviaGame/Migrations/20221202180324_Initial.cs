@@ -9,7 +9,7 @@ namespace TriviaGame.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "QuestionsModels",
+                name: "QuestionsModel",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -19,14 +19,14 @@ namespace TriviaGame.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_QuestionsModels", x => x.Id);
+                    table.PrimaryKey("PK_QuestionsModel", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "QuestionsModels");
+                name: "QuestionsModel");
         }
     }
 }
