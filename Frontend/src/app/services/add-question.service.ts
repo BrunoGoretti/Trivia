@@ -9,7 +9,7 @@ import { AddQuestion } from 'src/app/models/question-model';
 })
 export class AddQuestionService {
   constructor(private http: HttpClient) { }
-  private url = "AddQuestion";
+  private url = "CreateQuestion";
 
   public getQuestion() : Observable<AddQuestion[]> {
    return this.http.get<AddQuestion[]>(`${enviroments.apiUrl}/${this.url}`);
