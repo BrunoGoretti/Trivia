@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -16,6 +16,10 @@
       <h2>{{ question.questionText }}</h2>
     <div>
       Question:
+
+      <button type="button" class="next" (click)="initNewHero()">Init Question</button>
+      <app-add-question [question]="QuestionToEdit" (questionUpdated)="updateQuestionList($event)"></app-add-question>
+
       <input [(ngModel)]="question.questionText" placeholder="Question Text" />
       <input [(ngModel)]="question.rightAnswer" placeholder="RightAnswer Text" />
     </div>
@@ -24,19 +28,32 @@
     </button>
   </div>
 </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0" />
+    <title>Add Queston</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Add Queston</h1>
+
+      <thead>
+      </thead>
+      <div>
+        Question:
+        <input type= "question.questionText" placeholder="Question Text" />
+        <input type ="question.rightAnswer" placeholder="RightAnswer Text" />
+        <!-- <button type="button" class="next" (click)="updateQuestionList()">Update Question</button> -->
+        <app-add-question [question]="QuestionToEdit" (questionUpdated)="updateQuestionList($event)"></app-add-question>
+        <!-- <button type="button" class="submit" (click)="updateQuestionList()">Update Questions</button> -->
+        <!-- <input type="button" class="btn btn-info w-75" value="Update Questions"  (click)="updateQuestionList()"/> -->
+      </div>
+</body>
 </html>
 
-<!-- <html>
-  <body>
-    <div *ngIf="question">
-      <h2>{{ question.questionText }}</h2>
-    <div>
-      Name:
-      <input [(ngModel)] = "question.questionText" placeholder="Question Text"/>
-    </div>
-    <button (click)="createQuestion(question)" *ngIf="!question.id">
-      Create
-    </button>
-</div>
-</body>
-</html> -->
+

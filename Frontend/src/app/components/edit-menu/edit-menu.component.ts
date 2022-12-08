@@ -23,18 +23,18 @@ export class EditMenuComponent {
     .subscribe((result: AddQuestion[]) => (this.questions = result));
     }
 
-    updateQuestionList(questions: AddQuestion[]){
-      this.questions = questions;
-    }
+    // updateQuestionList(questions: AddQuestion[]){
+    //   this.questions = questions;
+    // }
 
-    initNewHero(){
-      this.QuestionToEdit = new AddQuestion();
-    }
+    // initNewHero(){
+    //   this.QuestionToEdit = new AddQuestion();
+    // }
 
-  // btnClick() {
-  //   this.router.navigateByUrl('trivia-game');
-  // }
-  // btnAddQuestion() {
-  //   this.router.navigateByUrl('add-question');
-  // }
+     btnClick() {
+    this.router.navigateByUrl('trivia-game');
+     }
+     btnAddQuestion() {
+    this.router.navigateByUrl('add-question');
+     }
 }

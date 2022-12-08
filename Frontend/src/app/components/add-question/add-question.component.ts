@@ -10,17 +10,31 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
   styleUrls: ['./add-question.component.css']
 })
 export class AddQuestionComponent implements OnInit{
+
+  questions: AddQuestion[] = [];
+  title = 'AddQuestion.UI';
+  QuestionToEdit? : AddQuestion;
+
   @Input() question?: AddQuestion;
   @Output() questionUpdated = new EventEmitter<AddQuestion[]>();
   constructor(private http: HttpClient, private router: Router,
     private addQuestionService: AddQuestionService) { }
   ngOnInit() : void {
-
+    this.addQuestionService
+    .getQuestion()
+    .subscribe((result: AddQuestion[]) => (this.questions = result));
      }
+    //  createQuestion(question: AddQuestion) {
+    //   this.addQuestionService
+    //   .createQuestion(question)
+    //   .subscribe((questions : AddQuestion[]) => this.questionUpdated.emit(questions));
+    // }
 
-     createQuestion(question: AddQuestion) {
-      this.addQuestionService
-      .createQuestion(question)
-      .subscribe((questions : AddQuestion[]) => this.questionUpdated.emit(questions));
-    }
+      updateQuestionList(questions: AddQuestion[]){
+        this.questions = questions;
+      }
+
+      // initNewHero(){
+      //   this.QuestionToEdit = new AddQuestion();
+      // }
 }
