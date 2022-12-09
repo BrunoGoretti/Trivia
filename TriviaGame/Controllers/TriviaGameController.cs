@@ -18,9 +18,9 @@ namespace TriviaGame.Controllers
         }
 
         [HttpGet("GetQuestion")]
-        public async Task<ActionResult<List<QuestionsModel>>> GetQuestion()
+        public async Task<ActionResult<List<QuestionsModel>>> GetOneQuestion(int id)
         {
-            return Ok(await _context.QuestionsModels.ToListAsync());
+            return Ok(await _context.QuestionsModels.Where(x => x.Id == id).FirstOrDefaultAsync());
         }
 
         [HttpPost("CreateQuestion")]
