@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './trivia-game.component.html',
   styleUrls: ['./trivia-game.component.css']
 })
-export class TriviaGameComponent {
+export class TriviaDataComponent {
     constructor(private http: HttpClient){}
      posts: any[] = [];
 }

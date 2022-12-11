@@ -7,53 +7,41 @@
     <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
-    <h1 id="title">Add Queston</h1>
-    <thead>
-      <th>Question</th>
-      <th></th>
-    </thead>
-    <div *ngIf="question">
-      <h2>{{ question.questionText }}</h2>
-    <div>
-      Question:
+    <div class="site_column_menu">
 
-      <button type="button" class="next" (click)="initNewHero()">Init Question</button>
-      <app-add-question [question]="QuestionToEdit" (questionUpdated)="updateQuestionList($event)"></app-add-question>
-
-      <input [(ngModel)]="question.questionText" placeholder="Question Text" />
-      <input [(ngModel)]="question.rightAnswer" placeholder="RightAnswer Text" />
-    </div>
-    <button (click)="createQuestion(question)" *ngIf="!question.id">
-      Create Question
-    </button>
-  </div>
+      <h1 id="title">Add Queston</h1>
+          <div class="site_text_menu">
+              <div *ngIf="question">
+                <h2>{{ question.questionText }}</h2>
+                <br>
+                <input ng-Model= "question.questionText" placeholder="Question" />
+                <br>
+                <input ng-Model ="question.rightAnswer" placeholder="Right Answer" />
+                <br>
+                <button (click)="createQuestion(question)" *ngIf="!question.id">Create</button>
+              </div>
+            </div>
+      </div>
 </body>
 </html> -->
 
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-widht, initial-scale=1.0" />
-    <title>Add Queston</title>
-    <link rel="stylesheet" href="/src/styles.css" />
-  </head>
-  <body>
-    <h1 id="title">Add Queston</h1>
 
-      <thead>
-      </thead>
-      <div>
-        Question:
-        <input type= "question.questionText" placeholder="Question Text" />
-        <input type ="question.rightAnswer" placeholder="RightAnswer Text" />
-        <!-- <button type="button" class="next" (click)="updateQuestionList()">Update Question</button> -->
-        <app-add-question [question]="QuestionToEdit" (questionUpdated)="updateQuestionList($event)"></app-add-question>
-        <!-- <button type="button" class="submit" (click)="updateQuestionList()">Update Questions</button> -->
-        <!-- <input type="button" class="btn btn-info w-75" value="Update Questions"  (click)="updateQuestionList()"/> -->
+
+<form ng-submit="createUser(userForm)" name="userForm">
+  <div class="row">
+      <div class="col-sm-6">
+          <div class="form-group">
+              <label for="password">Password</label>
+              <input type="text" class="form-control1" ng-model="question.questionText" required id="password"   />
+          </div>
       </div>
-</body>
-</html>
-
-
+      <div class="col-sm-6">
+          <div class="form-group">
+              <label for="username">Operator</label>
+              <input type="text" class="form-control1" ng-model="question.rightAnswer" required id="username"  />
+          </div>
+      </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Add user</button>
+</form>

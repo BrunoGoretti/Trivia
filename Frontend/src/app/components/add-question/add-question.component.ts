@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { AddQuestion } from 'src/app/models/question-model';
+import { TriviaData } from 'src/app/models/trivia-data';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AddQuestionService } from 'src/app/services/add-question.service';
 
@@ -11,30 +11,16 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
 })
 export class AddQuestionComponent implements OnInit{
 
-  questions: AddQuestion[] = [];
-  title = 'AddQuestion.UI';
-  QuestionToEdit? : AddQuestion;
+  questions: TriviaData[] = [];
 
-  @Input() question?: AddQuestion;
-  @Output() questionUpdated = new EventEmitter<AddQuestion[]>();
-  constructor(private http: HttpClient, private router: Router,
-    private addQuestionService: AddQuestionService) { }
+  @Input() question?: TriviaData;
+  constructor(private addQuestionService: AddQuestionService) { }
   ngOnInit() : void {
-    this.addQuestionService
-    .getQuestion()
-    .subscribe((result: AddQuestion[]) => (this.questions = result));
-     }
-    //  createQuestion(question: AddQuestion) {
-    //   this.addQuestionService
-    //   .createQuestion(question)
-    //   .subscribe((questions : AddQuestion[]) => this.questionUpdated.emit(questions));
-    // }
 
-      updateQuestionList(questions: AddQuestion[]){
-        this.questions = questions;
+     }
+      createQuestion(question: TriviaData) {
+        this.addQuestionService
+        .createQuestion(question);
       }
 
-      // initNewHero(){
-      //   this.QuestionToEdit = new AddQuestion();
-      // }
 }

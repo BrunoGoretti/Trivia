@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { enviroments } from 'src/environments/environment';
-import { AddQuestion } from 'src/app/models/question-model';
+import { TriviaData } from 'src/app/models/trivia-data';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +11,13 @@ export class AddQuestionService {
   constructor(private http: HttpClient) { }
   private url = "CreateQuestion";
 
-  public getQuestion() : Observable<AddQuestion[]> {
-   return this.http.get<AddQuestion[]>(`${enviroments.apiUrl}/${this.url}`);
+  public getQuestion() : Observable<TriviaData[]> {
+   return this.http.get<TriviaData[]>(`${enviroments.apiUrl}/${this.url}`);
   }
 
-   public createQuestion(question : AddQuestion) : Observable<AddQuestion[]> {
+   public createQuestion(question : TriviaData) : Observable<TriviaData[]> {
 
-    return this.http.post<AddQuestion[]>(
+    return this.http.post<TriviaData[]>(
       `${enviroments.apiUrl}/${this.url}`,
       question);
    }
