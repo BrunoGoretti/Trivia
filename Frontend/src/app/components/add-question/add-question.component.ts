@@ -12,15 +12,21 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
 export class AddQuestionComponent implements OnInit{
 
   questions: TriviaData[] = [];
+  questionToEdit? : TriviaData;
 
-  @Input() question?: TriviaData;
+  // @Input() question?: TriviaData;
   constructor(private addQuestionService: AddQuestionService) { }
   ngOnInit() : void {
-
      }
-      createQuestion(question: TriviaData) {
-        this.addQuestionService
-        .createQuestion(question);
+      // createQuestion(question: TriviaData) {
+      //   this.addQuestionService
+      //   .createQuestion(question);
+      // }
+      initNewHero(){
+        this.questionToEdit = new TriviaData();
       }
 
+      updateQuestionList(heroes: TriviaData[]){
+        this.questions = heroes;
+      }
 }

@@ -7,13 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { EditMenuComponent } from './components/main-menu/main-menu.component';
 import { AddQuestionComponent } from './components/add-question/add-question.component';
 import { FormsModule } from '@angular/forms';
+import { CreateQuestionComponent } from './components/create-question/create-question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TriviaDataComponent,
     EditMenuComponent,
-    AddQuestionComponent
+    AddQuestionComponent,
+    CreateQuestionComponent
   ],
   imports: [
     BrowserModule,

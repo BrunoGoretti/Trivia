@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -11,24 +11,32 @@
 
       <h1 id="title">Add Queston</h1>
           <div class="site_text_menu">
-              <div *ngIf="question">
-                <h2>{{ question.questionText }}</h2>
-                <br>
-                <input ng-Model= "question.questionText" placeholder="Question" />
-                <br>
-                <input ng-Model ="question.rightAnswer" placeholder="Right Answer" />
-                <br>
-                <button (click)="createQuestion(question)" *ngIf="!question.id">Create</button>
-              </div>
+            <button (click)="initNewHero()">Create New Hero</button>
+            <table>
+              <thead>
+                <th>Name</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Place</th>
+                <th></th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let question of questions">
+                  <td>{{ question.questionText}}</td>
+                  <td>{{ question.rightAnswer}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <app-create-question [question]="questionToEdit" (questionsUpdated)="initNewHero()"></app-create-question>
             </div>
       </div>
 </body>
-</html> -->
+</html>
 
 
 
 
-<form ng-submit="createUser(userForm)" name="userForm">
+<!-- <form ng-submit="createUser(userForm)" name="userForm">
   <div class="row">
       <div class="col-sm-6">
           <div class="form-group">
@@ -44,4 +52,4 @@
       </div>
   </div>
   <button class="btn btn-primary" type="submit">Add user</button>
-</form>
+</form> -->
