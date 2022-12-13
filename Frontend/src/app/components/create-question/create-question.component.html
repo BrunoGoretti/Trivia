@@ -1,14 +1,13 @@
 <div *ngIf="question">
-    <h2>{{ question.questionText }}</h2>
-    <div>
-      Name:
-      <input [(ngModel)]="question.questionText" placeholder="Question Text" />
-    </div>
-    <div>
-      First Name:
-      <input [(ngModel)]="question.rightAnswer" placeholder="Right Answer" />
-    </div>
-    <!-- <button (click)="updateHero(hero)" *ngIf="hero.id">Save</button>
-    <button (click)="deleteHero(hero)" *ngIf="hero.id">Delete</button> -->
-    <button (click)="createQuestion(question)" *ngIf="!question.id">Create</button>
+  <div>
+    Question:
+    <input [(ngModel)]="question.questionText" placeholder="Question Text" />
   </div>
+  <div>
+    Answer:
+    <input [(ngModel)]="question.rightAnswer" placeholder="Right Answer" />
+  </div>
+  <!-- <button (click)="updateHero(hero)" *ngIf="hero.id">Save</button>
+    <button (click)="deleteHero(hero)" *ngIf="hero.id">Delete</button> -->
+  <button (click)="createQuestion(question)" *ngIf="!question.id">Create</button>
+</div>
