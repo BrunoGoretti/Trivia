@@ -1,4 +1,4 @@
-export class AddQuestion {
+export class TriviaData {
   id?: number;
   questionText? = "";
   rightAnswer? = "";
