@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TriviaData } from 'src/app/models/trivia-data';
-import { AddQuestionService } from 'src/app/services/add-question.service';
+import { BaseHttpService } from 'src/app/services/base-http.service';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +13,11 @@ export class AppComponent {
   title = 'AddQuestion.UI';
   questions: TriviaData[] = [];
 
-  constructor(private addQuestionService: AddQuestionService,
+  constructor(private addBaseHttpService: BaseHttpService,
     private http: HttpClient, private router: Router){}
     ngOnInit() : void {
-    this.addQuestionService
+    this.addBaseHttpService
     .getQuestion()
-    .subscribe((result: TriviaData[]) => (this.questions = result));
     }
 
   btnClick() {

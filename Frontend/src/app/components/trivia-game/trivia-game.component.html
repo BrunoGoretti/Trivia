@@ -5,7 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-widht, initial-scale=1.0" />
     <title>Quiz Game</title>
-    <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body>
     <h1 id="title">Quiz</h1>
@@ -14,6 +13,10 @@
       <div class="answers">
         <div id="questiontitle">
           Question:
+
+          <!-- <h1 (click)="getOneQuestion()" ></h1> -->
+          <h1>{{ question.questionText }}</h1>
+          <!-- <h1 (click)="getOneQuestion()" *ngIf="!question.questionText">Create</h1> -->
 
           <h2 id="answer"></h2>
           <ol type="A">

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { TriviaData } from 'src/app/models/trivia-data';
-import { AddQuestionService } from 'src/app/services/add-question.service';
+import { BaseHttpService } from 'src/app/services/base-http.service';
 
 @Component({
   selector: 'app-create-question',
@@ -10,12 +10,12 @@ import { AddQuestionService } from 'src/app/services/add-question.service';
 export class CreateQuestionComponent implements OnInit{
   @Input() question?: TriviaData;
   @Output() questionsUpdated = new EventEmitter<TriviaData[]>();
-  constructor(private addQuestionService: AddQuestionService) { }
+  constructor(private addBaseHttpService: BaseHttpService) { }
   ngOnInit() : void {
   }
 
       createQuestion(question: TriviaData) {
-        this.addQuestionService
+        this.addBaseHttpService
         .createQuestion(question)
         .subscribe((heroes : TriviaData[]) => this.questionsUpdated.emit(heroes));
       }
