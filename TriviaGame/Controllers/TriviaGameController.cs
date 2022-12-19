@@ -17,6 +17,16 @@ namespace TriviaGame.Controllers
             _context = context;
         }
 
+        [HttpGet("GetOneQuestion")]
+        public async Task<ActionResult<List<QuestionsModel>>> GetOneQuestion()
+        {
+            IEnumerable<QuestionsModel> result = _context.QuestionsModels;
+            int index = new Random().Next(1, result.Count() + 1);
+            var oneQuestion = result.Where(x => x.Id == index);
+
+            return Ok(oneQuestion);
+        }
+
         [HttpGet("GetQuestion")]
         public async Task<ActionResult<List<QuestionsModel>>> GetQuestion()
         {

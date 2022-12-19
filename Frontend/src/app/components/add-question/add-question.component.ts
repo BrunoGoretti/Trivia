@@ -18,10 +18,6 @@ export class AddQuestionComponent implements OnInit{
   constructor(private addQuestionService: AddQuestionService) { }
   ngOnInit() : void {
      }
-      // createQuestion(question: TriviaData) {
-      //   this.addQuestionService
-      //   .createQuestion(question);
-      // }
       initNewHero(){
         this.questionToEdit = new TriviaData();
       }
