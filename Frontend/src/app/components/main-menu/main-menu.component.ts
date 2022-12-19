@@ -3,10 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { TriviaDataComponent } from '../trivia-game/trivia-game.component';
 import { TriviaData } from 'src/app/models/trivia-data';
-import { AddQuestionService } from 'src/app/services/add-question.service';
+import { BaseHttpService } from 'src/app/services/base-http.service';
 
 @Component({
-  selector: 'app-edit-menu',
+  selector: 'app-main-menu',
   templateUrl: './main-menu.component.html',
   styleUrls: ['./main-menu.component.css'],
 })
@@ -15,12 +15,11 @@ export class EditMenuComponent {
   title = 'AddQuestion.UI';
   QuestionToEdit? : TriviaData;
 
-  constructor(private addQuestionService: AddQuestionService,
+  constructor(private addBaseHttpService: BaseHttpService,
     private http: HttpClient, private router: Router){}
     ngOnInit() : void {
-    this.addQuestionService
+    this.addBaseHttpService
     .getQuestion()
-    .subscribe((result: TriviaData[]) => (this.questions = result));
     }
      btnClick() {
     this.router.navigateByUrl('trivia-game');

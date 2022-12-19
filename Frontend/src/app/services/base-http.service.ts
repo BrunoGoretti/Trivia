@@ -7,25 +7,25 @@ import { TriviaData } from 'src/app/models/trivia-data';
 @Injectable({
   providedIn: 'root'
 })
-export class AddQuestionService {
+export class BaseHttpService {
   constructor(private http: HttpClient) { }
   private url = "CreateQuestion";
+  private randomQuestionUrl = "GetOneQuestion";
 
   public getQuestion() : Observable<TriviaData[]> {
    return this.http.get<TriviaData[]>(`${enviroments.apiUrl}/${this.url}`);
   }
 
-   public createQuestion(question : TriviaData) : Observable<TriviaData[]> {
+  public getOneQuestion() : Observable<TriviaData[]> {
+  //  return this.http.get<TriviaData[]>(`${enviroments.apiUrl}/${this.url}`);
 
+   return this.http.get<TriviaData[]>(`${enviroments.apiUrl}/${this.randomQuestionUrl}`);
+  }
+
+   public createQuestion(question : TriviaData) : Observable<TriviaData[]> {
     return this.http.post<TriviaData[]>(
       `${enviroments.apiUrl}/${this.url}`,
       question);
    }
 
-  //  public deleteSuperHero(hero : AddQuestion) : Observable<AddQuestion[]> {
-
-  //   return this.http.delete<AddQuestion[]>(
-  //     `${enviroments.apiUrl}/${this.url}/${hero.id}`
-  //     );
-  //  }
 }
