@@ -11,7 +11,7 @@ import { BaseHttpService } from 'src/app/services/base-http.service';
   styleUrls: ['./main-menu.component.css'],
 })
 export class EditMenuComponent {
-  questions: TriviaData[] = [];
+  // questions: TriviaData[] = [];
   title = 'AddQuestion.UI';
   QuestionToEdit? : TriviaData;
 
@@ -21,10 +21,10 @@ export class EditMenuComponent {
     this.addBaseHttpService
     .getQuestion()
     }
-     btnClick() {
+     startGame() {
     this.router.navigateByUrl('trivia-game');
      }
-     btnAddQuestion() {
+     addQuestion() {
     this.router.navigateByUrl('add-question');
      }
 }
