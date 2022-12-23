@@ -7,20 +7,28 @@ import { TriviaData } from 'src/app/models/trivia-data';
 @Component({
   selector: 'app-trivia-game',
   templateUrl: './trivia-game.component.html',
-  styleUrls: ['./trivia-game.component.css']
+  styleUrls: ['./trivia-game.component.css'],
 })
-export class TriviaDataComponent {
+export class TriviaDataComponent implements OnInit {
+  data: TriviaData | undefined;
+  constructor(
+    private http: HttpClient,
+    private httpService: BaseHttpService
+  ) {}
 
-  question?: TriviaData;
-
-  constructor(private http: HttpClient, private addBaseHttpService: BaseHttpService){}
-  // posts: TriviaData[] = [];
-
-  ngOnInit() : void{this.getOneQuestion()}
-
-  getOneQuestion(){
-    this.addBaseHttpService
-    .getOneQuestion()
-    .subscribe();
+  ngOnInit(): void {
+    this.getOneQuestion();
   }
+
+  getOneQuestion() {
+    this.httpService.getOneQuestion().subscribe((data) => {
+      this.data = data[0];
+    });
+  }
+
+  // ngOnInitQuestion() {
+  //   this.addBaseHttpService.getData().subscribe(data => {
+  //     this.data = data;
+  //   });
+  // }
 }
