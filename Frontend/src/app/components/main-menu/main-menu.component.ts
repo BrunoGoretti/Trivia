@@ -21,10 +21,10 @@ export class EditMenuComponent {
     this.addBaseHttpService
     .getQuestion()
     }
-     btnClick() {
+     startGame() {
     this.router.navigateByUrl('trivia-game');
      }
-     btnAddQuestion() {
+     addQuestion() {
     this.router.navigateByUrl('add-question');
      }
 }

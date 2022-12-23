@@ -13,7 +13,7 @@
 
     <h1 id="title">Add Queston</h1>
     <div class="site_text_menu">
-      <button (click)="initNewHero()">Create New Question</button>
+      <button (click)="initNewQuestion()">Create New Question</button>
       <table>
         <tbody>
           <tr *ngFor="let question of questions">
@@ -22,7 +22,7 @@
           </tr>
         </tbody>
       </table>
-      <app-create-question [question]="questionToEdit" (questionsUpdated)="initNewHero()"></app-create-question>
+      <app-create-question [question]="questionToEdit" (questionsUpdated)="initNewQuestion()"></app-create-question>
     </div>
   </div>
 </body>

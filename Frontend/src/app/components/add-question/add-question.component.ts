@@ -16,11 +16,11 @@ export class AddQuestionComponent implements OnInit {
   // @Input() question?: TriviaData;
   constructor(private BaseHttpService: BaseHttpService) {}
   ngOnInit(): void {}
-  initNewHero() {
+  initNewQuestion() {
     this.questionToEdit = new TriviaData();
   }
 
-  updateQuestionList(heroes: TriviaData[]) {
-    this.questions = heroes;
+  updateQuestionList(updatequestion: TriviaData[]) {
+    this.questions = updatequestion;
   }
 }
