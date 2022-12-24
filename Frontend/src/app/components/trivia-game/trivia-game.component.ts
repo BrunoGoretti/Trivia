@@ -11,7 +11,7 @@ import { TriviaData } from 'src/app/models/trivia-data';
 })
 export class TriviaDataComponent implements OnInit {
   data: TriviaData | undefined;
-  userAnswer: string = '';
+  userAnswer?: string = '';
   constructor(
     private http: HttpClient,
     private httpService: BaseHttpService,
@@ -28,11 +28,17 @@ export class TriviaDataComponent implements OnInit {
   }
 
   AnswerButton() {
-    console.log(this.userAnswer);
+    // console.log(this.userAnswer);
+
+    this.httpService.getOneQuestion().subscribe((data) => {
+      this.data = data[0];
+    });;
+
+    if(this.userAnswer == this.data?.rightAnswer){
+        console.log("Correct");
+    }
+    else{
+      console.log("Wrong");
+    }
   }
-  // ngOnInitQuestion() {
-  //   this.addBaseHttpService.getData().subscribe(data => {
-  //     this.data = data;
-  //   });
-  // }
 }
