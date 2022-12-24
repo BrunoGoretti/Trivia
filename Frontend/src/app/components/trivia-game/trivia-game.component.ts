@@ -11,10 +11,11 @@ import { TriviaData } from 'src/app/models/trivia-data';
 })
 export class TriviaDataComponent implements OnInit {
   data: TriviaData | undefined;
+  userAnswer: string = '';
   constructor(
     private http: HttpClient,
-    private httpService: BaseHttpService
-  ) {}
+    private httpService: BaseHttpService,
+    ) {}
 
   ngOnInit(): void {
     this.getOneQuestion();
@@ -26,6 +27,9 @@ export class TriviaDataComponent implements OnInit {
     });
   }
 
+  AnswerButton() {
+    console.log(this.userAnswer);
+  }
   // ngOnInitQuestion() {
   //   this.addBaseHttpService.getData().subscribe(data => {
   //     this.data = data;
