@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BaseHttpService } from 'src/app/services/base-http.service';
 import { TriviaData } from 'src/app/models/trivia-data';
+import { IfStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-trivia-game',
@@ -12,6 +13,8 @@ import { TriviaData } from 'src/app/models/trivia-data';
 export class TriviaDataComponent implements OnInit {
   data: TriviaData | undefined;
   userAnswer?: string = '';
+  answerMessage: string = ""
+  isaddTextAnswer: boolean = false;
   constructor(
     private http: HttpClient,
     private httpService: BaseHttpService,
@@ -27,18 +30,21 @@ export class TriviaDataComponent implements OnInit {
     });
   }
 
-  AnswerButton() {
+  answerButton() {
+    if(this.userAnswer === this.data?.rightAnswer){
+        this.answerMessage = "Correct"
+      }
+      else{
+        this.answerMessage = "Wrong"
+      }
+      this.isaddTextAnswer = true;
+  }
+
+  nextQuestionButton(){
     // console.log(this.userAnswer);
-
-    this.httpService.getOneQuestion().subscribe((data) => {
-      this.data = data[0];
-    });;
-
-    if(this.userAnswer == this.data?.rightAnswer){
-        console.log("Correct");
-    }
-    else{
-      console.log("Wrong");
-    }
+      location.reload()
+      this.httpService.getOneQuestion().subscribe((data) => {
+        this.data = data[0];
+      });
   }
 }
