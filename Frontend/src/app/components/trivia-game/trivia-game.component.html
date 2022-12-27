@@ -15,8 +15,6 @@
           Question:
 
           <div>{{ data?.questionText }}</div>
-        <div>Your answer:</div>
-          <div>{{ answerMessage }}</div>
 
           <h2 id="answer"></h2>
           <ol type="A">
@@ -27,8 +25,7 @@
         </div>
       </div>
       <div class="buttons">
-        <button type="button" class="next" (click)="answerButton()">Answer</button>
-        <button *ngIf="isaddTextAnswer" type="button" class="next" (click)="nextQuestionButton()">Next question</button>
+        <button type="button" class="next" (click)="AnswerButton()">Answer</button>
       </div>
     </div>
     <div id="scoreboard">
