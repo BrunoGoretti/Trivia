@@ -12,6 +12,7 @@ import { IfStmt } from '@angular/compiler';
 })
 export class TriviaDataComponent implements OnInit {
   data: TriviaData | undefined;
+
   userAnswer?: string = '';
   answerMessage: string = ""
   isaddTextAnswer: boolean = false;
@@ -20,31 +21,30 @@ export class TriviaDataComponent implements OnInit {
     private httpService: BaseHttpService,
     ) {}
 
-  ngOnInit(): void {
-    this.getOneQuestion();
-  }
+    ngOnInit(): void {
+      this.getOneQuestion();
+    }
 
-  getOneQuestion() {
-    this.httpService.getOneQuestion().subscribe((data) => {
-      this.data = data[0];
-    });
-  }
+    getOneQuestion() {
+      this.httpService.getOneQuestion().subscribe((data) => {
+        this.data = data;
+      });
+    }
 
-  answerButton() {
-    if(this.userAnswer === this.data?.rightAnswer){
+    answerButton() {
+      if(this.userAnswer === this.data?.rightAnswer){
         this.answerMessage = "Correct"
       }
       else{
         this.answerMessage = "Wrong"
       }
       this.isaddTextAnswer = true;
-  }
+    }
 
   nextQuestionButton(){
-    // console.log(this.userAnswer);
       location.reload()
       this.httpService.getOneQuestion().subscribe((data) => {
-        this.data = data[0];
+        this.data = data;
       });
   }
 }

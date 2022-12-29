@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TriviaGame.Data;
 using TriviaGame.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace TriviaGame.Controllers
 {
@@ -18,13 +19,16 @@ namespace TriviaGame.Controllers
         }
 
         [HttpGet("GetOneQuestion")]
-        public async Task<ActionResult<List<QuestionsModel>>> GetOneQuestion()
+        public ActionResult<List<QuestionsModel>> GetOneQuestion()
         {
-            IEnumerable<QuestionsModel> result = _context.QuestionsModels;
-            int index = new Random().Next(1, result.Count() + 1);
-            var oneQuestion = result.Where(x => x.Id == index);
+            var dbModel = _context.QuestionsModels;
+            List<QuestionsModel> result = dbModel.ToList();
+            Random random = new Random();
+            //var oneQuestion = result.Where(x => x.Id == index);
+            int index = random.Next(0, result.Count());
+            var randomValue = result.ElementAt(index);
 
-            return Ok(oneQuestion);
+            return Ok(randomValue);
         }
 
         [HttpGet("GetQuestion")]
