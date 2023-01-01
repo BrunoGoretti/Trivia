@@ -89,10 +89,39 @@ button {
   font-size: 1.5rem;
   border-radius: 1.5rem;
   color: rgba(43, 19, 19, 0.98);
+}
+.orange {
   background: rgba(244, 115, 68, 0.98);
 }
-button:active {
-  background: rgb(250, 241, 230);
+.green {
+  background: rgba(74, 244, 68, 0.98);
+}
+.red {
+  background: rgba(244, 68, 68, 0.98);
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .site_column_menu {

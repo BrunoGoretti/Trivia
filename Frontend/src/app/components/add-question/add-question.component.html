@@ -13,8 +13,8 @@
 
     <h1 id="title">Add Queston</h1>
     <div class="site_text_menu">
-      <button (click)="initNewQuestion()">Create New Question</button>
-      <button (click)="goBack()">Back</button>
+      <button class="button green"(click)="initNewQuestion()"><span>Create New Question</span></button>
+      <button class="button red"(click)="goBack()"><span>Back</span></button>
       <table>
         <tbody>
           <tr *ngFor="let question of questions">

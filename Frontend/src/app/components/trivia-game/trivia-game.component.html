@@ -27,8 +27,9 @@
         </div>
       </div>
       <div class="buttons">
-        <button type="button" class="next" (click)="answerButton()">Answer</button>
-        <button *ngIf="isaddTextAnswer" type="button" class="next" (click)="nextQuestionButton()">Next question</button>
+        <button type="button" class="button orange" (click)="answerButton()"><span>Answer</span></button>
+        <button *ngIf="isaddTextAnswer" type="button" class="button green"
+        (click)="nextQuestionButton()"><span>Next question</span></button>
       </div>
     </div>
     <div id="scoreboard">

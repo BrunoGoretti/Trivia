@@ -10,10 +10,10 @@
         <router-outlet></router-outlet>
 
       <h1 id="title"> Quiz Game</h1>
-        <div class="buttons">
-            <button type="button" class="next" (click)="startGame()">Start</button>
-            <button type="button" class="next" (click)="addQuestion()">Create new question</button>
-          </div>
+            <div class="buttons">
+              <button class="button green"(click)="startGame()"><span>Start</span></button>
+              <button class="button orange"(click)="addQuestion()"><span>Create new question</span></button>
+            </div>
       <div id="scoreboard">
         <h2 id="score"></h2>
       </div>
