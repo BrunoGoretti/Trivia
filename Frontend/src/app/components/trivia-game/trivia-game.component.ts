@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BaseHttpService } from 'src/app/services/base-http.service';
 import { TriviaData } from 'src/app/models/trivia-data';
-import { IfStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-trivia-game',
@@ -19,6 +18,7 @@ export class TriviaDataComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private httpService: BaseHttpService,
+    private router: Router,
     ) {}
 
     ngOnInit(): void {
@@ -46,5 +46,9 @@ export class TriviaDataComponent implements OnInit {
       this.httpService.getOneQuestion().subscribe((data) => {
         this.data = data;
       });
+  }
+  goBack(): void
+  {
+    this.router.navigateByUrl('menu');
   }
 }
