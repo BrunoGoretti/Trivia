@@ -31,6 +31,10 @@
         <button *ngIf="isaddTextAnswer" type="button" class="button green"
         (click)="nextQuestionButton()"><span>Next question</span></button>
       </div>
+      <div class="buttonsright">
+
+        <button class="button red"(click)="goBack()"><span>End game</span></button>
+      </div>
     </div>
     <div id="scoreboard">
       <h2 id="score"></h2>
