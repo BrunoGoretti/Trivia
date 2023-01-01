@@ -14,7 +14,7 @@ export class AddQuestionComponent implements OnInit {
   questionToEdit?: TriviaData;
 
   // @Input() question?: TriviaData;
-  constructor(private BaseHttpService: BaseHttpService) {}
+  constructor(private BaseHttpService: BaseHttpService, private router: Router) {}
   ngOnInit(): void {}
   initNewQuestion() {
     this.questionToEdit = new TriviaData();
@@ -22,5 +22,10 @@ export class AddQuestionComponent implements OnInit {
 
   updateQuestionList(updatequestion: TriviaData[]) {
     this.questions = updatequestion;
+  }
+
+  goBack(): void
+  {
+    this.router.navigateByUrl('menu');
   }
 }

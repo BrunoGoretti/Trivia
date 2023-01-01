@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TriviaDataComponent } from './components/trivia-game/trivia-game.component';
 import { HttpClientModule } from '@angular/common/http';
-import { EditMenuComponent } from './components/main-menu/main-menu.component';
+import { MenuComponent } from './components/main-menu/main-menu.component';
 import { AddQuestionComponent } from './components/add-question/add-question.component';
 import { FormsModule } from '@angular/forms';
 import { CreateQuestionComponent } from './components/create-question/create-question.component';
@@ -13,7 +13,7 @@ import { CreateQuestionComponent } from './components/create-question/create-que
   declarations: [
     AppComponent,
     TriviaDataComponent,
-    EditMenuComponent,
+    MenuComponent,
     AddQuestionComponent,
     CreateQuestionComponent
   ],

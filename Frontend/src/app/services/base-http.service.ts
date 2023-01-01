@@ -16,10 +16,10 @@ export class BaseHttpService {
    return this.http.get<TriviaData[]>(`${enviroments.apiUrl}/${this.url}`);
   }
 
-  public getOneQuestion() : Observable<TriviaData[]> {
+  public getOneQuestion() : Observable<TriviaData> {
   //  return this.http.get<TriviaData[]>(`${enviroments.apiUrl}/${this.url}`);
 
-   return this.http.get<TriviaData[]>(`${enviroments.apiUrl}/${this.randomQuestionUrl}`);
+   return this.http.get<TriviaData>(`${enviroments.apiUrl}/${this.randomQuestionUrl}`);
   }
 
    public createQuestion(question : TriviaData) : Observable<TriviaData[]> {
