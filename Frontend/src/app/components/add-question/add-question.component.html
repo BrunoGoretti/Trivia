@@ -12,6 +12,7 @@
   <div class="site_column_menu">
 
     <h1 id="title">Add Queston</h1>
+  <div class="buttonsCenter">
     <div class="site_text_menu">
       <button class="button green"(click)="initNewQuestion()"><span>Create New Question</span></button>
       <button class="button red"(click)="goBack()"><span>Back</span></button>
@@ -25,6 +26,7 @@
       </table>
       <app-create-question [question]="questionToEdit" (questionsUpdated)="initNewQuestion()"></app-create-question>
     </div>
+  </div>
   </div>
 </body>
 

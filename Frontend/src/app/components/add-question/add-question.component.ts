@@ -26,6 +26,6 @@ export class AddQuestionComponent implements OnInit {
 
   goBack(): void
   {
-    this.router.navigateByUrl('menu');
+    this.router.navigateByUrl('');
   }
 }
