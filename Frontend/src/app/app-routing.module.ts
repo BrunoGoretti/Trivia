@@ -6,7 +6,7 @@ import { AddQuestionComponent } from './components/add-question/add-question.com
 
 
 const routes: Routes = [
-  {component: MenuComponent, path: 'menu'},
+  {component: MenuComponent, path: ''},
   {component: TriviaDataComponent, path: 'trivia-game'},
   {component: AddQuestionComponent, path: 'add-question'}
 ];

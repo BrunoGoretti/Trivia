@@ -49,6 +49,6 @@ export class TriviaDataComponent implements OnInit {
   }
   goBack(): void
   {
-    this.router.navigateByUrl('menu');
+    this.router.navigateByUrl('');
   }
 }
