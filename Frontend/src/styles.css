@@ -109,7 +109,9 @@ button {
 .red {
   background: rgba(244, 68, 68, 0.98);
 }
-
+.gray-button {
+  background-color: gray;
+}
 .button span {
   cursor: pointer;
   display: inline-block;
