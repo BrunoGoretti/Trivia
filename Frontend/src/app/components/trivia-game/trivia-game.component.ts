@@ -12,6 +12,8 @@ import { TriviaData } from 'src/app/models/trivia-data';
 export class TriviaDataComponent implements OnInit {
   data: TriviaData | undefined;
 
+  limit: number = 4;
+  clickCount: number = 0;
   userAnswer?: string = '';
   answerMessage: string = ""
   isaddTextAnswer: boolean = false;
@@ -32,6 +34,8 @@ export class TriviaDataComponent implements OnInit {
     }
 
     answerButton() {
+      this.clickCount++;
+      console.log(this.clickCount)
       if(this.userAnswer === this.data?.rightAnswer){
         this.answerMessage = "Correct"
       }
@@ -39,16 +43,26 @@ export class TriviaDataComponent implements OnInit {
         this.answerMessage = "Wrong"
       }
       this.isaddTextAnswer = true;
+      this.userAnswer = '';
+      this.questionLimit();
     }
 
   nextQuestionButton(){
-      location.reload()
       this.httpService.getOneQuestion().subscribe((data) => {
         this.data = data;
       });
+      this.answerMessage = '';
   }
   goBack(): void
   {
     this.router.navigateByUrl('');
   }
+  questionLimit(): void
+  {
+     if(this.limit === this.clickCount)
+     {
+       console.log("gaysex");
+     }
+  }
+
 }
