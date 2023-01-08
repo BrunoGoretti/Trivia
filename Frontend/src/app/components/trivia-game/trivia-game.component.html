@@ -28,7 +28,6 @@
           <div id="questioncollor">
             <div>{{ data?.questionText }}</div>
           </div>
-
           <h2 id="answer"></h2>
           <ol type="A">
             <input id="questionaddinput" [(ngModel)]="userAnswer" type="text" class="option"/>
@@ -36,20 +35,18 @@
           </ol>
           <h4 id="start"></h4>
           <div>Your answer {{ answerMessage }}</div>
+          <div> {{ conclusionMessage }}</div>
         </div>
       </div>
       <div class="buttons">
-        <!-- <button type="button" class="button orange" (click)="answerButton()"><span>Answer</span></button> -->
         <button [disabled]="answerButtonEnabled" type="button" class="button orange"
         [ngClass]="{'gray-button': isGrayAnswerBtn}" (click)="answerButton()" ><span>Answer</span></button>
-        <!-- <button *ngIf="isaddTextAnswer" type="button" class="button green"
-        (click)="nextQuestionButton()"><span>Next question</span></button> -->
+
         <button [disabled]="nextQuestionButtonEnabled" type="button" class="button green"
         [ngClass]="{'gray-button': isGrayNextQuestionBtn}" (click)="nextQuestionButton()">
         <span>Next question</span></button>
       </div>
       <div class="buttonsright">
-
         <button class="button red"(click)="goBack()"><span>End game</span></button>
       </div>
     </div>

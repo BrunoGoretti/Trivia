@@ -21,6 +21,7 @@ export class TriviaDataComponent implements OnInit {
   clickCount: number = 0;
   userAnswer?: string = '';
   answerMessage: string = ""
+  conclusionMessage: string = ""
   constructor(
     private http: HttpClient,
     private httpService: BaseHttpService,
@@ -39,7 +40,6 @@ export class TriviaDataComponent implements OnInit {
 
     answerButton() {
       this.clickCount++;
-      // console.log(this.clickCount)
 
       if(this.userAnswer?.toLowerCase() === this.data?.rightAnswer?.toLowerCase()){
         this.answerMessage = "correct"
@@ -71,18 +71,21 @@ export class TriviaDataComponent implements OnInit {
   {
     this.router.navigateByUrl('');
   }
+
   questionLimit(): void
   {
      if(this.limit === this.clickCount)
      {
+      this.isGrayNextQuestionBtn = true;
+      this.nextQuestionButtonEnabled = true;
        if(this.score === 0){
-          console.log('zloy shrek')
+          this.conclusionMessage = "You lose"
        }
        else if(this.score === this.limit){
-          console.log('shrek forever')
+          this.conclusionMessage = "You won!"
        }
        else{
-        console.log('Nu mog pi i po luchshe')
+        this.conclusionMessage = "You could play better"
        }
      }
   }
