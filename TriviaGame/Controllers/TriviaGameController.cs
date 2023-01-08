@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TriviaGame.Data;
 using TriviaGame.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
 namespace TriviaGame.Controllers
 {
@@ -24,7 +22,6 @@ namespace TriviaGame.Controllers
             var dbModel = _context.QuestionsModels;
             List<QuestionsModel> result = dbModel.ToList();
             Random random = new Random();
-            //var oneQuestion = result.Where(x => x.Id == index);
             int index = random.Next(0, result.Count());
             var randomValue = result.ElementAt(index);
 
@@ -45,6 +42,5 @@ namespace TriviaGame.Controllers
 
             return Ok(await _context.QuestionsModels.ToListAsync());
         }
-
     }
 }
