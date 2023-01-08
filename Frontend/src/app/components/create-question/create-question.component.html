@@ -1,13 +1,15 @@
 <div *ngIf="question">
-  <div id="questiontitle">
-    <div>
-      Question:
-      <input [(ngModel)]="question.questionText" placeholder="Question Text" />
-    </div>
   <div>
-    Answer:
-    <input [(ngModel)]="question.rightAnswer" placeholder="Right Answer" />
+    <input id="questionaddinput" [(ngModel)]="question.questionText" placeholder="Question Text" />
   </div>
-  <button (click)="createQuestion(question)" class="button green" *ngIf="!question.id"><span>Create</span></button>
-</div>
+  <div>
+    <input id="questionaddinput" [(ngModel)]="question.rightAnswer" placeholder="Right Answer" />
+  </div>
+  <button
+    (click)="createQuestion(question)"
+    class="button green"
+    *ngIf="!question.id"
+  >
+    <span>Create</span>
+  </button>
 </div>

@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-widht, initial-scale=1.0">
-        <title> Quiz Game</title>
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
 
-        <router-outlet></router-outlet>
+    <style>
+      body {
+        font-family: "Black Ops One", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <router-outlet></router-outlet>
 
-      <h1 id="title"> Quiz Game</h1>
-      <div class="buttonsCenter">
-        <div class="buttons">
-          <button class="button green"(click)="startGame()"><span>Start</span></button>
-        </div>
-        <div class="buttons">
-          <button class="button orange"(click)="addQuestion()"><span>Create new question</span></button>
-        </div>
+    <h1 id="title">Quiz Game</h1>
+    <div class="buttonsCenter">
+      <div class="buttons">
+        <button class="button green" (click)="startGame()">
+          <span>Start</span>
+        </button>
       </div>
-      <div id="scoreboard">
-        <h2 id="score"></h2>
+      <div class="buttons">
+        <button class="button orange" (click)="addQuestion()">
+          <span>Create new question</span>
+        </button>
       </div>
-    </body>
+    </div>
+    <div id="scoreboard">
+      <h2 id="score"></h2>
+    </div>
+  </body>
 </html>
-
