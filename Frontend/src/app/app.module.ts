@@ -8,7 +8,6 @@ import { MenuComponent } from './components/main-menu/main-menu.component';
 import { AddQuestionComponent } from './components/add-question/add-question.component';
 import { FormsModule } from '@angular/forms';
 import { CreateQuestionComponent } from './components/create-question/create-question.component';
-import { ConclusionComponent } from './components/conclusion/conclusion.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +16,6 @@ import { ConclusionComponent } from './components/conclusion/conclusion.componen
     MenuComponent,
     AddQuestionComponent,
     CreateQuestionComponent,
-    ConclusionComponent
   ],
   imports: [
     BrowserModule,

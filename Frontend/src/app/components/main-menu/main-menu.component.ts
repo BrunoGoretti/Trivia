@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { TriviaDataComponent } from '../trivia-game/trivia-game.component';
 import { TriviaData } from 'src/app/models/trivia-data';
 import { BaseHttpService } from 'src/app/services/base-http.service';
 
