@@ -10,7 +10,6 @@ import { BaseHttpService } from 'src/app/services/base-http.service';
   styleUrls: ['./main-menu.component.css'],
 })
 export class MenuComponent {
-  // questions: TriviaData[] = [];
   title = 'AddQuestion.UI';
   QuestionToEdit? : TriviaData;
 

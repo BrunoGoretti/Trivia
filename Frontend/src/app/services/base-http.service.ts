@@ -17,8 +17,6 @@ export class BaseHttpService {
   }
 
   public getOneQuestion() : Observable<TriviaData> {
-  //  return this.http.get<TriviaData[]>(`${enviroments.apiUrl}/${this.url}`);
-
    return this.http.get<TriviaData>(`${enviroments.apiUrl}/${this.randomQuestionUrl}`);
   }
 
@@ -27,5 +25,4 @@ export class BaseHttpService {
       `${enviroments.apiUrl}/${this.url}`,
       question);
    }
-
 }
