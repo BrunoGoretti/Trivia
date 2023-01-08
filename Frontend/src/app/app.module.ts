@@ -8,6 +8,7 @@ import { MenuComponent } from './components/main-menu/main-menu.component';
 import { AddQuestionComponent } from './components/add-question/add-question.component';
 import { FormsModule } from '@angular/forms';
 import { CreateQuestionComponent } from './components/create-question/create-question.component';
+import { ConclusionComponent } from './components/conclusion/conclusion.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CreateQuestionComponent } from './components/create-question/create-que
     TriviaDataComponent,
     MenuComponent,
     AddQuestionComponent,
-    CreateQuestionComponent
+    CreateQuestionComponent,
+    ConclusionComponent
   ],
   imports: [
     BrowserModule,

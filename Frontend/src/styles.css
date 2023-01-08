@@ -29,14 +29,41 @@ img {
   font-size: 3rem;
   color: rgb(255, 255, 255);
   background: rgba(78, 79, 77, 0.311);
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
+
+#questionaddinput {
+  color: #121212;
+    display: block;
+    width: 90%;
+    height: 44px;
+    padding: 5px 5%;
+    border: 1px solid #ccc;
+    -moz-border-radius: 27px;
+    -webkit-border-radius: 27px;
+    border-radius: 27px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #fff;
+    font-size: 105%;
+    letter-spacing: .8px;
+}
+
 #questiontitle {
   text-align: center;
   padding: 0.8rem 0;
+  font-weight: bold;
   font-size: 2rem;
   color: rgb(47, 47, 47);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+#questioncollor {
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .answers {

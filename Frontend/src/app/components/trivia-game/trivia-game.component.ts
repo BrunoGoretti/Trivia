@@ -42,12 +42,12 @@ export class TriviaDataComponent implements OnInit {
       // console.log(this.clickCount)
 
       if(this.userAnswer?.toLowerCase() === this.data?.rightAnswer?.toLowerCase()){
-        this.answerMessage = "Correct"
+        this.answerMessage = "correct"
         this.score++;
         console.log(this.score);
       }
       else{
-        this.answerMessage = "Wrong"
+        this.answerMessage = "wrong";
       }
       this.userAnswer = '';
       this.isGrayAnswerBtn = true;

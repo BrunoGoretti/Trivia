@@ -5,6 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-widht, initial-scale=1.0" />
     <title>Quiz Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Black Ops One", cursive;
+      }
+    </style>
   </head>
   <body>
     <h1 id="title">Quiz</h1>
@@ -12,17 +24,18 @@
     <div id="quiz-container">
       <div class="answers">
         <div id="questiontitle">
-          Question:
-
-          <div>{{ data?.questionText }}</div>
+          The question:
+          <div id="questioncollor">
+            <div>{{ data?.questionText }}</div>
+          </div>
 
           <h2 id="answer"></h2>
           <ol type="A">
-            <input  [(ngModel)]="userAnswer" type="text" class="option"/>
+            <input id="questionaddinput" [(ngModel)]="userAnswer" type="text" class="option"/>
             <span id="option0"></span>
           </ol>
           <h4 id="start"></h4>
-          <div>Your answer: {{ answerMessage }}</div>
+          <div>Your answer {{ answerMessage }}</div>
         </div>
       </div>
       <div class="buttons">
