@@ -113,6 +113,7 @@ span {
 }
 .buttonsright {
   text-align: right;
+  margin-top: -50px;
 }
 button {
   background: linear-gradient(to bottom, #ffb347, #ffcc33);

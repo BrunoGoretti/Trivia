@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-conclusion',
@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./conclusion.component.css']
 })
 export class ConclusionComponent {
-  myimage: string = "Wrong.jpg";
 }
